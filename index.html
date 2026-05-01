@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atharva Kumbhar — Cybersecurity Researcher, Ethical Hacker, Penetration Tester" />
+  <title>Atharva Kumbhar — Cybersecurity</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="scanline"></div>
+
+  <!-- ═══════════════════════════════════ NAV ═══ -->
+  <nav id="main-nav">
+    <div class="nav-logo" onclick="navigate('home')">AK<span>://</span>sec</div>
+    <ul class="nav-links">
+      <li><a onclick="navigate('home')"     data-page="home">home</a></li>
+      <li><a onclick="navigate('about')"    data-page="about">about</a></li>
+      <li><a onclick="navigate('projects')" data-page="projects">projects</a></li>
+      <li><a onclick="navigate('tools')"    data-page="tools">tools</a></li>
+      <li><a onclick="navigate('certs')"    data-page="certs">certs</a></li>
+      <li><a onclick="navigate('contact')"  data-page="contact">contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()">☰</button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a onclick="navigate('home');toggleMobileMenu()">Home</a>
+    <a onclick="navigate('about');toggleMobileMenu()">About</a>
+    <a onclick="navigate('projects');toggleMobileMenu()">Projects</a>
+    <a onclick="navigate('tools');toggleMobileMenu()">Tools</a>
+    <a onclick="navigate('certs');toggleMobileMenu()">Certs</a>
+    <a onclick="navigate('contact');toggleMobileMenu()">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: HOME ═══ -->
+  <div class="page active" id="page-home">
+    <div class="hero-wrap">
+      <div class="hero-glow"></div>
+      <div class="hero-glow2"></div>
+      <div class="hero-tag">Cybersecurity Researcher &amp; Ethical Hacker</div>
+      <h1 class="hero-name">
+        Atharva
+        <span class="hero-name-accent">Kumbhar</span>
+      </h1>
+      <p class="hero-role">
+        <span class="hl" id="hero-role-text">Ethical Hacker</span>
+        <span id="hero-role-rest"> · Penetration Tester · CTF Player · Bug Hunter</span>
+        <span class="cursor"></span>
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="navigate('projects')">View Projects →</button>
+        <button class="btn btn-outline" onclick="navigate('contact')">Get In Touch</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" id="stat-ctf">15+</div>
+          <div class="stat-label">CTFs Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat-proj">8+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" id="stat-cve">3+</div>
+          <div class="stat-label">CVEs Reported</div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: ABOUT ═══ -->
+  <div class="page" id="page-about">
+    <div class="inner-page">
+      <div class="section-kicker">// 01 — about me</div>
+      <h2 class="section-title" id="about-section-title">Securing the Digital Frontier</h2>
+      <div class="about-grid">
+        <div class="about-text" id="about-body-text">
+          <p>I'm <strong>Atharva Kumbhar</strong>, a cybersecurity enthusiast and researcher based in Nagpur, India. I specialise in offensive security — hunting vulnerabilities before malicious actors do.</p>
+          <p>My work spans <strong>penetration testing</strong>, <strong>network forensics</strong>, <strong>CTF competitions</strong>, and <strong>bug bounty hunting</strong>. I enjoy reverse engineering malware and building tools that automate security workflows.</p>
+          <p>When I'm not breaking things, I'm building defences — writing security tooling, documenting findings, and sharing knowledge with the infosec community.</p>
+          <p>Currently pursuing a degree in Computer Science while actively participating in the cybersecurity ecosystem through bug bounties and open-source contributions.</p>
+        </div>
+        <div class="about-skills" id="skills-container"></div>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: PROJECTS ═══ -->
+  <div class="page" id="page-projects">
+    <div class="inner-page">
+      <div class="section-kicker">// 02 — projects</div>
+      <h2 class="section-title">Featured Work</h2>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: TOOLS ═══ -->
+  <div class="page" id="page-tools">
+    <div class="inner-page">
+      <div class="section-kicker">// 03 — tools &amp; stack</div>
+      <h2 class="section-title">Arsenal</h2>
+      <div class="tools-grid" id="tools-grid"></div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: CERTS ═══ -->
+  <div class="page" id="page-certs">
+    <div class="inner-page">
+      <div class="section-kicker">// 04 — certifications</div>
+      <h2 class="section-title">Credentials</h2>
+      <div class="certs-list" id="certs-list"></div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ PAGE: CONTACT ═══ -->
+  <div class="page" id="page-contact">
+    <div class="inner-page contact-inner">
+      <div class="section-kicker" style="justify-content:center">// 05 — contact</div>
+      <h2 class="contact-big">Let's <span>Connect</span></h2>
+      <p class="contact-sub">Open to collaborations, bug bounty partnerships, freelance pentests, and security research opportunities.</p>
+      <div class="contact-links" id="contact-links"><!-- filled by JS --></div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copy">© 2025 Atharva Kumbhar</div>
+      <div class="footer-status"><div class="dot"></div>Available for engagements</div>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════ ADMIN LOGIN ═══ -->
+  <div id="admin-overlay">
+    <div class="login-box">
+      <div class="login-title">// admin access</div>
+      <p class="login-sub">Enter credentials to manage portfolio content.</p>
+      <div class="login-field">
+        <label>Username</label>
+        <input type="text" id="login-user" placeholder="admin" autocomplete="off" />
+      </div>
+      <div class="login-field">
+        <label>Password</label>
+        <input type="password" id="login-pass" placeholder="••••••••"
+          onkeydown="if(event.key==='Enter')doLogin()" />
+        <div class="login-err" id="login-err">Invalid credentials. Try again.</div>
+      </div>
+      <div class="login-actions">
+        <button class="btn btn-primary btn-sm" onclick="doLogin()">Authenticate →</button>
+        <button class="btn-sm btn-cancel" onclick="closeLogin()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ ADMIN DASH ═══ -->
+  <div id="admin-dash">
+    <div class="admin-nav">
+      <div class="admin-nav-title">⚙ Admin — Portfolio Manager</div>
+      <div class="admin-nav-actions">
+        <button class="btn-save btn-sm" onclick="saveAllData()">💾 Save All</button>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <div class="admin-tab active" onclick="switchTab('tab-about')">About</div>
+        <div class="admin-tab" onclick="switchTab('tab-projects')">Projects</div>
+        <div class="admin-tab" onclick="switchTab('tab-skills')">Skills</div>
+        <div class="admin-tab" onclick="switchTab('tab-tools')">Tools</div>
+        <div class="admin-tab" onclick="switchTab('tab-certs')">Certs</div>
+        <div class="admin-tab" onclick="switchTab('tab-socials')">Socials</div>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="admin-panel active" id="tab-about">
+        <div class="admin-section-title">About Section</div>
+        <div class="admin-form-card">
+          <div class="form-card-title">Hero Stats</div>
+          <div class="stat-inputs">
+            <div class="form-group"><label>CTFs Stat</label><input type="text" id="a-ctf" placeholder="15+"></div>
+            <div class="form-group"><label>Projects Stat</label><input type="text" id="a-proj" placeholder="8+"></div>
+            <div class="form-group"><label>CVEs Stat</label><input type="text" id="a-cve" placeholder="3+"></div>
+          </div>
+        </div>
+        <div class="admin-form-card">
+          <div class="form-card-title">Bio Text</div>
+          <div class="form-group"><label>Section Subtitle</label><input type="text" id="a-subtitle" placeholder="Securing the Digital Frontier"></div>
+          <div class="form-group"><label>Bio (HTML allowed — wrap each paragraph in &lt;p&gt; tags)</label><textarea id="a-bio" rows="9"></textarea></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-add btn-sm" onclick="saveAbout()">Save About</button>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="admin-panel" id="tab-projects">
+        <div class="admin-section-title">Projects</div>
+        <div class="admin-form-card">
+          <div class="form-card-title" id="proj-form-title">Add New Project</div>
+          <div class="form-row">
+            <div class="form-group"><label>Title</label><input type="text" id="p-title" placeholder="Project Name"></div>
+            <div class="form-group"><label>Icon (emoji)</label><input type="text" id="p-icon" placeholder="🔍" maxlength="4"></div>
+          </div>
+          <div class="form-group"><label>Description</label><textarea id="p-desc" rows="3" placeholder="Short project description..."></textarea></div>
+          <div class="form-row">
+            <div class="form-group"><label>GitHub URL</label><input type="text" id="p-gh" placeholder="https://github.com/..."></div>
+            <div class="form-group"><label>Demo / Writeup URL</label><input type="text" id="p-demo" placeholder="https://..."></div>
+          </div>
+          <div class="form-group">
+            <label>Tags — format: color:Label (colors: c=cyan, b=blue, r=red, a=amber, g=green) separated by commas</label>
+            <input type="text" id="p-tags" placeholder="r:Red Team, c:Python, b:Network">
+          </div>
+          <div class="form-actions">
+            <button class="btn-add btn-sm" onclick="saveProject()">Save Project</button>
+            <button class="btn-cancel btn-sm" onclick="cancelEditProject()">Clear</button>
+          </div>
+        </div>
+        <div class="admin-list" id="admin-projects-list"></div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="admin-panel" id="tab-skills">
+        <div class="admin-section-title">Skills &amp; Proficiency</div>
+        <div class="admin-form-card">
+          <div class="form-card-title">Add Skill</div>
+          <div class="form-row">
+            <div class="form-group"><label>Skill Name</label><input type="text" id="s-name" placeholder="Penetration Testing"></div>
+            <div class="form-group"><label>Proficiency % (0–100)</label><input type="number" id="s-pct" placeholder="90" min="0" max="100"></div>
+          </div>
+          <div class="form-actions"><button class="btn-add btn-sm" onclick="addSkill()">Add Skill</button></div>
+        </div>
+        <div id="admin-skills-list"></div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="admin-panel" id="tab-tools">
+        <div class="admin-section-title">Tools &amp; Stack</div>
+        <div class="admin-form-card">
+          <div class="form-card-title">Add Tool</div>
+          <div class="form-row">
+            <div class="form-group"><label>Tool Name</label><input type="text" id="t-name" placeholder="Burp Suite"></div>
+            <div class="form-group"><label>Category</label><input type="text" id="t-cat" placeholder="Web"></div>
+          </div>
+          <div class="form-actions"><button class="btn-add btn-sm" onclick="addTool()">Add Tool</button></div>
+        </div>
+        <div class="admin-list" id="admin-tools-list"></div>
+      </div>
+
+      <!-- CERTS -->
+      <div class="admin-panel" id="tab-certs">
+        <div class="admin-section-title">Certifications</div>
+        <div class="admin-form-card">
+          <div class="form-card-title">Add Certification</div>
+          <div class="form-row">
+            <div class="form-group"><label>Name</label><input type="text" id="c-name" placeholder="Certified Ethical Hacker"></div>
+            <div class="form-group"><label>Issuer</label><input type="text" id="c-issuer" placeholder="EC-Council"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Year</label><input type="text" id="c-year" placeholder="2024"></div>
+            <div class="form-group">
+              <label>Status</label>
+              <select id="c-status">
+                <option>Active</option><option>Certificate</option><option>Platform</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions"><button class="btn-add btn-sm" onclick="addCert()">Add Cert</button></div>
+        </div>
+        <div class="admin-list" id="admin-certs-list"></div>
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="admin-panel" id="tab-socials">
+        <div class="admin-section-title">Social &amp; Contact Links</div>
+        <p style="font-size:0.82rem;color:var(--muted2);margin-bottom:1.5rem;font-weight:300;">
+          These links power the Contact page buttons. Leave a URL blank to hide that button.
+        </p>
+        <div class="admin-form-card">
+          <div class="form-card-title">Manage Links</div>
+          <div id="socials-editor"><!-- filled by JS --></div>
+          <div class="form-actions" style="margin-top:1.5rem;">
+            <button class="btn-add btn-sm" onclick="addCustomSocial()">+ Add Custom Link</button>
+            <button class="btn-save btn-sm" onclick="saveSocials()">Save Links</button>
+          </div>
+        </div>
+        <div style="margin-top:1rem;padding:1rem 1.2rem;background:var(--panel2);border:1px solid var(--border);border-radius:3px;">
+          <div style="font-family:var(--mono);font-size:0.65rem;color:var(--amber);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;">ℹ How it works</div>
+          <p style="font-size:0.8rem;color:var(--muted2);font-weight:300;line-height:1.7;">
+            Changes here update the Contact page instantly. Click <strong style="color:var(--cyan)">Save All</strong> in the top bar to persist across sessions. To permanently bake links into the site, edit <code style="color:var(--cyan);font-size:0.78rem;">assets/js/config.js</code> directly.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- admin-body -->
+  </div><!-- admin-dash -->
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/render.js"></script>
+  <script src="assets/js/admin.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
